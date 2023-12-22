@@ -2,6 +2,7 @@ package service
 
 import (
 	"bufio"
+	"github.com/gomvn/gomvn/internal/config"
 	"os"
 	"strings"
 
@@ -10,7 +11,7 @@ import (
 
 func NewStorage() *Storage {
 	return &Storage{
-		root: "data/repository",
+		root: config.Dirname + "/repository",
 	}
 }
 

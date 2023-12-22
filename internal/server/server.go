@@ -19,6 +19,7 @@ func New(conf *config.App, ps *service.PathService, storage *service.Storage, us
 	app := fiber.New()
 	app.Settings.IdleTimeout = time.Second * 5
 	app.Settings.DisableStartupMessage = true
+	app.Settings.BodyLimit = 152601444
 	app.Settings.Templates = html.New("./views", ".html")
 
 	app.Use(compression.New())

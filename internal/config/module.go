@@ -4,6 +4,8 @@ import (
 	"go.uber.org/fx"
 )
 
+var Dirname = "gomvn"
+
 func Module(configFile string) fx.Option {
 	return fx.Options(
 		fx.Provide(func() (*App, error) {
